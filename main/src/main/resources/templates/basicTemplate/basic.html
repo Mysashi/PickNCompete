@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>"${title}"</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:insert="~{blocks/header :: pick-header}"></header>
+<footer th:insert="~{blocks/footer :: pick-footer}"></footer>
+</body>
+</html>

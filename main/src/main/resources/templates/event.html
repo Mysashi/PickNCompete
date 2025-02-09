@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>"${title}"</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:insert="~{blocks/header :: pick-header}"></header>
+<div class="central-text">
+  <h2>Создайте мероприятие</h2>
+<div class="wrapper">
+  <form action="/event" method="post">
+  <div class="event-container">
+    <div class="top-section">
+      <h3>Название мероприятия:</h3>
+      <p><input name="eventName" type="text" placeholder="Название..." required></p>
+    </div>
+    <div class="left-section">
+      <h3>Администратор:</h3>
+      <span>Имя Администратора:</span>
+      <input name="adminName" type="text" placeholder="Имя..." style="margin-right: 10px;" required>
+      <p></p>
+      <span>Пароль:</span>
+      <input name="password" type="text" placeholder="Пароль..." style="margin-right: 10px;">
+      <h3>Жюри:</h3>
+      <span>Количество жюри:</span>
+      <input name="juryNum" type="number" placeholder="Число..." style="margin-right:10px;" required>
+    </div>
+    <div class="right-section">
+      <h3>Команды:</h3>
+      <span>Количество команд:</span>
+      <input name="teamNum" type="number" placeholder="Число..." style="margin-right:10px;" required>
+      <h3>Критерии:</h3>
+      <button id="openPopupButton">Открыть список критериев</button>
+      <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+          <span class="close-button" id="closePopupButton">&times;</span>
+          <h2>Добавить критерии</h2>
+          <div class="input-area">
+            <input name="criteria" type="text" id="itemInput" placeholder="критерий...">
+            <button id="addItemButton">Add</button>
+          </div>
+          <ul id="itemList"></ul>
+        </div>
+        </div>
+      </div>
+      <script type="text/javascript" th:src="@{/js/popup-event.js}"></script>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <button type="submit" class="button">Создать</button>
+  </form>
+  </div>
+  </div>
+</div>
+
+</div>
+<footer th:insert="~{blocks/footer :: pick-footer}"></footer>
+</body>
+</html>

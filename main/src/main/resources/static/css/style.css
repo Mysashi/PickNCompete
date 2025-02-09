@@ -1,0 +1,299 @@
+.logo {
+  font-size: 1.5em;
+  font-family:Oswald /* Размер текста логотипа */
+  font-weight: bold; /* Жирный текст */
+}
+.container {
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера по горизонтали */
+  padding: 0 20px; /* Отступы по бокам для контейнера */
+  display: flex; /* Используем flexbox для выравнивания */
+  justify-content: flex-end; /* Выравнивание контента в правый край */
+}
+
+.header {
+  background-color: #000; /* Черный цвет фона */
+  padding: 15px 0; /* Отступы сверху и снизу */
+  color: #fff; /* Белый цвет текста */
+}
+
+.central-container {
+  display: flex;                /* Включаем flexbox */
+  flex-direction: column;       /* Располагаем элементы в столбец */
+  justify-content: center;    /* Центрирование по вертикали */
+  align-items: center;        /* Центрирование по горизонтали */
+  height: 100vh;              /* Устанавливаем высоту контейнера на весь viewport (видимую область) */
+  background-color: #f0f0f0; /* Опциональный фон для контейнера */
+}
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+      font-family: 'Oswald', sans-serif;
+    background-color: #000; /* Черный цвет кнопки */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: none; /* Убираем стандартную рамку */
+    cursor: pointer; /* Меняем курсор при наведении */
+    font-size: 16px; /* Размер текста */
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 20px auto;
+    /* Центрирование кнопки по горизонтали и отступ сверху */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.button:hover {
+    background-color: #0000FF; /* Зеленый цвет при наведении */
+    color: white;
+}
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.event-container {
+    background-color: #e0e0e0; /* Серый цвет контейнера */
+           display: grid; /* Используем grid для размещения секций */
+           grid-template-rows: auto 1fr; /* верхняя секция auto, остальное 1fr */
+           grid-template-columns: 1.2fr 1fr; /* Левая и правая секции занимают по 1fr */
+           padding: 20px;
+           border-radius: 8px;
+           width: 80%; /* Занимает 80% ширины экрана */
+           max-width: 800px;
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+.wrapper {
+    display: flex; /* Используем flexbox для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    min-height: 100vh; /* Занимает всю высоту экрана */
+    background-color: #f0f0f0; /* светло-серый фон */
+}
+.top-section {
+    grid-column: 1 / -1; /* Занимает всю ширину */
+    padding: 15px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #ccc; /* Добавляем нижнюю границу */
+    height: 20px; /* Пример: увеличиваем высоту верхней секции */
+}
+
+.top-section input[type="text"] {
+    padding: 5px;
+    border: none; /* Черная граница */
+    border-radius: 4px;
+    font-size: 10px;
+    height:10px;
+    background-color: #fff; /* Белый фон */
+    color: #000; /* Черный цвет текста */
+}
+
+.top-section input[type="text"]:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+
+
+.left-section, .right-section {
+    padding: 15px;
+    height: 400px;
+}
+
+.left-section {
+    text-align: left; /* текст слева */
+    border-right: 1px solid #ccc; /* Вертикальная линия между секциями */
+    border-top: 1px solid #ccc;
+}
+
+.right-section {
+    text-align: right; /* текст справа */
+    border-top: 1px solid #ccc;
+    display;flex;
+    align-items:center;
+}
+
+
+#openPopupButton {
+    background-color: #000; /* White Background */
+    color: #fff; /* Black Text */
+    border: 2px solid #fff; /* Black Border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#openPopupButton:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.collapsible {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    .collapsible-header {
+      padding: 10px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .collapsible-content {
+      padding: 10px;
+      display: none; /* Initially hidden */
+      border-top: 1px solid #ccc;
+      /* Fixed Height and Scroll */
+      max-height: 150px; /* Adjust to your desired height */
+      overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    }
+    .collapsible-content.active {
+      display: block;
+    }
+    .collapsible-item {
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+    .collapsible-item:last-child{
+      border-bottom: none;
+    }
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allow scroll on the container if it exceeds viewport */
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh; /* Set max height to allow scroll within the content */
+    overflow-y: auto;
+}
+
+.central-text {
+    font-size: 20px;
+    margin: 0 auto;  /* Центрирует блок по горизонтали */
+    text-align: center; /* Центрирует текст внутри блока */
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.input-area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#itemInput{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+#addItemButton{
+  padding: 8px 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+ul li label{
+    white-space: nowrap;
+}
+
+
+ul li button{
+  display: inline-flex;
+  align-items: center;
+  right: 10px;
+  justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* make the button circle shaped */
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1; /* make sure the cross is vertically centered */
+    padding: 0;
+}
+
+ul li button:hover{
+    background-color: #d32f2f;
+}
+
+
+
+ul li input{
+    flex-grow: 1;
+    padding: 5px; /* Reduce the padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50px;
+    max-width: 100px; /* Set a max width for the input */
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: auto; /* Прижимаем к низу */
+  width: 100%; /*  Занимает всю ширину */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.copyright {
+  margin: 0;
+}
+
+
+
+

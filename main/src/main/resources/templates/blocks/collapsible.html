@@ -1,0 +1,16 @@
+<h2>Мой список</h2>
+<div class="collapsible" th:fragment="pick-collapsible">
+  <div class="collapsible-header">
+    <span>My Collapsible</span>
+    <button class="add-item-button">+</button>
+  </div>
+  <div class="collapsible-content">
+  </div>
+</div>
+
+<template id="item-template">
+  <div class="collapsible-item">
+    <span>Item Content</span>
+  </div>
+</template>
+<script type="text/javascript" th:src="@{/js/listview.js}"></script>

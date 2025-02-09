@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>"${title}"</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/event.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header th:insert="~{blocks/header :: pick-header}"></header>
+<div class="admin-container">
+    <div class="left-panel">
+        <div class="admin-section">
+            <h3>Администратор:</h3>
+        </div>
+        <div class="commands-section">
+            <div class="cnt-text">Команды</div>
+        </div>
+        <div class="jurie-section">
+            <div сlass="cnt-text">Жюри</div>
+        </div>
+    </div>
+    <div class="center-panel" id="centerPanel">Главный список</div>
+
+    <div class="buttons-panel">
+        <div class="criteria-column">
+            <p>Sometimes</p>
+        </div>
+        <div class="team-column">
+            Something
+        </div>
+        <div class="mark-column">
+            Something
+        </div>
+    </div>
+
+</div>
+<footer th:insert="~{blocks/footer :: pick-footer}"></footer>
+</body>
+</html>

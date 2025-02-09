@@ -1,0 +1,103 @@
+.admin-container {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    column-gap: 50px;
+}
+
+.left-panel {
+  height: 800px;
+  width: 400px;
+  margin-left: 50px;
+
+}
+.center-panel {
+  background-color: lightblue;
+  height: 1000px;
+  width: 700px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+
+}
+
+.criteria-column {
+    width:80%;
+    height: 30%;
+    background-color: yellow;
+      border-radius: 10px;
+      border-width: 2px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+}
+
+.cnt-text {
+    justify-content: center;
+}
+
+.mark-column {
+    width:80%;
+    height: 30%;
+    background-color: brown;
+    margin-top: 10px;
+    border-style: solid;
+      border-radius: 10px;
+      border-width: 2px;
+}
+
+.team-column {
+    width:80%;
+    height: 30%;
+    background-color: purple;
+    margin-top: 10px;
+    border-style: solid;
+      border-radius: 10px;
+      border-width: 2px;
+}
+
+.buttons-panel {
+  height: 500px;
+  width: 400px;
+  margin-right: 50px;
+  gap: 20px;
+
+}
+
+.admin-section {
+    width:100%;
+    height:20%;
+    margin:0;
+    background-color: blue;
+       display: flex;
+       justify-content: center;
+      border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+.commands-section {
+   width:100%;
+   height:40%;
+   margin:0;
+   background-color: green;
+      display: flex;
+      justify-content: center;
+     border-style: solid;
+   border-radius: 10px;
+   margin-top:10px;
+   border-width: 2px;
+}
+
+.jurie-section {
+   width:100%;
+   height:50%;
+   background-color: orange;
+   display: flex;
+   justify-content: center;
+   border-style: solid;
+   border-radius: 10px;
+   margin-top:10px;
+   border-width: 2px;
+}
+
