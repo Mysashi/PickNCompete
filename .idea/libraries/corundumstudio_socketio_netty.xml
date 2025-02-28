@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="corundumstudio.socketio.netty" type="repository">
+    <properties maven-id="com.corundumstudio.socketio:netty-socketio:2.0.12" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/corundumstudio/socketio/netty-socketio/2.0.12/netty-socketio-2.0.12.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.114.Final/netty-buffer-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.114.Final/netty-common-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.114.Final/netty-transport-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.114.Final/netty-resolver-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.114.Final/netty-handler-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport-native-unix-common/4.1.114.Final/netty-transport-native-unix-common-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec-http/4.1.114.Final/netty-codec-http-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.114.Final/netty-codec-4.1.114.Final.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.18.1/jackson-core-2.18.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.18.1/jackson-databind-2.18.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.18.1/jackson-annotations-2.18.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

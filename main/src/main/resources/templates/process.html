@@ -13,25 +13,46 @@
     <div class="left-panel">
         <div class="admin-section">
             <h3>Администратор:</h3>
+            <p><input name="eventName" type="text" placeholder="Название..." required></p>
         </div>
         <div class="commands-section">
             <div class="cnt-text">Команды</div>
+            <ul>
+                <li><a href="">Выгнать команду</a></li>
+                <li><a href="">Пропустить команду</a></li>
+                <li><a href="">link3</a></li>
+            </ul>
         </div>
         <div class="jurie-section">
-            <div сlass="cnt-text">Жюри</div>
+            <ul>
+                <li>link1</li>
+                <li>link2</li>
+                <li>link3</li>
+            </ul>
         </div>
     </div>
     <div class="center-panel" id="centerPanel">Главный список</div>
 
     <div class="buttons-panel">
         <div class="criteria-column">
-            <p>Sometimes</p>
+            <button id="openPopupButton" type="button">Открыть список критериев</button>
+            <div id="popupContainer" class="popup-container">
+                <div class="popup-content">
+                    <span class="close-button" id="closePopupButton">&times;</span>
+                    <h2>Добавленные критерии</h2>
+                    <div th:each="el : ${criterion}">
+                        <li th:text="${el.name}"/>
+                    </div>
+                    <ul id="itemList"></ul>
+                </div>
+                <script type="text/javascript" th:src="@{/js/popup-event.js}"></script>
+            </div>
         </div>
         <div class="team-column">
-            Something
+            <button class="button">Команды</button>
         </div>
         <div class="mark-column">
-            Something
+            <button class="button">Оценки</button>
         </div>
     </div>
 

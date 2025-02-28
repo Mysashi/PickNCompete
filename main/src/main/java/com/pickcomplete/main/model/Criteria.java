@@ -9,6 +9,18 @@ public class Criteria {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
+    public Criteria(Event event, int fromInt, int toInt, String name) {
+        this.event = event;
+        this.fromInt = fromInt;
+        this.toInt = toInt;
+        this.name = name;
+    }
+
+    public Criteria() {
+
+    }
+
     private int fromInt;
     private int toInt;
 

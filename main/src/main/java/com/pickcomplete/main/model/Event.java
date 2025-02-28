@@ -88,6 +88,8 @@ public class Event {
 
     private String linkingCode;
 
+
+
     public Event(String eventsName, String username, String password, int teamNum, int juryNum, String linkingCode, String juryCode) {
         this.eventsName = eventsName;
         this.username = username;
