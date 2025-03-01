@@ -1,9 +1,11 @@
 package com.pickcomplete.main.model;
 
+import com.corundumstudio.socketio.Configuration;
 import com.corundumstudio.socketio.SocketIOServer;
 import com.pickcomplete.main.server_components.PickServer;
-import com.pickcomplete.main.server_components.SocketClient;
 import io.socket.client.Socket;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -16,16 +18,19 @@ public class Room {
 
     private final ArrayList<Jury> juryList = new ArrayList<Jury>();
 
-    private final PickServer pickServer = new PickServer();
 
-    private final SocketClient socket = new SocketClient();
 
-    public Room(String url, int teamNum, int JuryNum) {
+
+    public Room(int teamNum, int JuryNum) {
 
         //Инициализируем сервер
-        setServer(url);
         //Заполняем команды
         fillTeams(teamNum);
+    }
+
+
+    public void setModule(SocketIOServer server) {
+        System.out.println(server);
     }
 
 
@@ -43,21 +48,10 @@ public class Room {
         return juryList;
     }
 
-    private void setServer(String url) {
-        pickServer.init();
-        try {
-            socket.socketInitialization(url);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
-    public SocketIOServer getServer() {
-        return pickServer.getServer();
-    }
+//    public Configuration getServer() {
+//        return server.getConfiguration();
+//    }
 
-    public Socket getSocketClient() {
-        return socket.getSocket();
-    }
 
 }

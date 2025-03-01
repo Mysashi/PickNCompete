@@ -53,11 +53,8 @@ public class EventController {
             int criteriaTo = Integer.parseInt(allParams.get(String.format("criteria[%d][to]", index)));
             sendCriteria(sentEvent, criteriaInitial, criteriaTo, criteriaFrom);
             index++;
-
         }
-        Room room = new Room(PropertiesClass.getUrlServerEvents() + linkCode,teamNum, 0);
 
-        System.out.println(room.getServer().getAllClients());
         System.out.println("sentSUCCESFULY");
         return String.format("redirect:/event/%s", linkCode);
     }
@@ -75,9 +72,10 @@ public class EventController {
             }
         }
 
-
-
+        model.addAttribute("teams", eventwithCode.getTeamNum());
         model.addAttribute("criterion", criterion);
+
+
         if (eventwithCode == null) {
             return "eventNotFound";
         }

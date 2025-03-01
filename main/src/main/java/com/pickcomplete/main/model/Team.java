@@ -7,4 +7,5 @@ import jakarta.persistence.ManyToOne;
 
 public class Team {
 
+
 }
